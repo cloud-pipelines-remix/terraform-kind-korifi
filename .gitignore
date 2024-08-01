@@ -1,0 +1,7 @@
+.idea
+.envrc
+.terraform
+vendir
+.terraform.lock.hcl
+terraform.tfstate*
+vendir.lock.yml
