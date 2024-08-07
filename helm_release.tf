@@ -60,8 +60,12 @@ resource "helm_release" "concourse" {
     value = var.vault_address
   }
   set {
-    name = "concourse.web.vault.authBackend"
+    name  = "concourse.web.vault.authBackend"
     value = "token"
+  }
+  set {
+    name  = "concourse.worker.runtime"
+    value = "houdini"
   }
   set {
     name  = "secrets.githubClientId"
