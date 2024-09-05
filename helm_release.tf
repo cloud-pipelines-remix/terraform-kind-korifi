@@ -36,6 +36,10 @@ resource "helm_release" "concourse" {
     value = false
   }
   set {
+    name = "concourse.web.enableAcrossStep"
+    value = true
+  }
+  set {
     name  = "concourse.web.externalUrl"
     value = var.concourse_external_url
   }
